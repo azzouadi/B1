@@ -1,0 +1,64 @@
+/* Customized Styles */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: black;
+  font-weight: bold;
+}
+
+tr:hover {background-color: #f5f5f5;}
+
+.paginate-buttons a {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid lightgray;
+  color: gray;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.paginate-buttons a:focus,
+.paginate-buttons a:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  background-color: gainsboro;
+}
+
+.paginate-buttons span.active {
+  padding: 10px;
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  cursor: default;
+}
+
+.paginate-buttons span.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 900px) {
+  /* Responsive Design for smaller screens */
+  table, th, td {
+    width: auto;
+    overflow: scroll;
+    max-height: 500px;
+    min-width: 500px;
+  }
+
+  th, td {
+    min-width: 100px;
+    word-wrap: break-word;
+  }
+}
