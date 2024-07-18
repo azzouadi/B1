@@ -1,64 +1,114 @@
-/* Customized Styles */
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 2rem;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #aeaeb5;
+  margin: 0;
+  padding: 0;
 }
-
-th, td {
+ 
+.pharmacie {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ 
+.flex-col-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ 
+.filter-wrapper {
+  padding: 20px;
   border: 1px solid #ddd;
-  padding: 12px 15px;
+  background: #fafafa;
+  border-radius: 5px;
+}
+ 
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+ 
+.textfield-label {
+  margin-bottom: 10px;
+}
+ 
+.textfield-label label {
+  display: block;
+  margin-bottom: 5px;
+}
+ 
+.textfield-label input,
+.textfield-label select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+ 
+.button-outlined {
+  background: none;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+ 
+.button-outlined svg {
+  margin-right: 5px;
+}
+ 
+.text-error {
+  color: red;
+  margin-bottom: 10px;
+}
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+ 
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+ 
+th,
+td {
+  padding: 10px;
   text-align: left;
 }
-
+ 
 th {
-  background-color: #f2f2f2;
-  color: black;
-  font-weight: bold;
+  background: #f4f4f4;
 }
-
-tr:hover {background-color: #f5f5f5;}
-
-.paginate-buttons a {
-  padding: 10px;
-  background-color: white;
-  border: 1px solid lightgray;
-  color: gray;
-  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+ 
+tbody tr:nth-child(even) {
+  background: #fafafa;
 }
-
-.paginate-buttons a:focus,
-.paginate-buttons a:hover {
-  cursor: pointer;
-  transform: translateY(-2px);
-  background-color: gainsboro;
+ 
+.button-detail {
+  background: #d5d7da;
+  color: #cc2a2a;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
-
-.paginate-buttons span.active {
-  padding: 10px;
-  background-color: darkslateblue;
-  color: white;
-  border: none;
-  cursor: default;
-}
-
-.paginate-buttons span.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-@media screen and (max-width: 900px) {
-  /* Responsive Design for smaller screens */
-  table, th, td {
-    width: auto;
-    overflow: scroll;
-    max-height: 500px;
-    min-width: 500px;
-  }
-
-  th, td {
-    min-width: 100px;
-    word-wrap: break-word;
-  }
+ 
+.button-detail:hover {
+  background: #0056b3;
 }
